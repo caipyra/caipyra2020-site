@@ -1,0 +1,184 @@
+.main
+    background: $orange
+    background-image: linear-gradient(to bottom, #5590eb 30%, #afc8ee)
+    min-height: 650px
+    position: relative
+
+    .main-button
+      position: absolute
+      bottom: 25%
+      width: 100%
+      > a.button
+        background: $blue
+        padding: 15px
+        color: $white
+        font-size: 25px
+        display: block
+        text-align: center
+        border-radius: 50px
+        text-decoration: none
+        width: 300px
+        margin: 0 auto
+
+        @media screen and (max-width: 600px)
+            bottom: 30%
+
+    .nav-mobile
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background: $black
+        position: fixed
+        right: 20px
+        top: 20px
+        cursor: pointer
+        z-index: 10px
+
+        &.close > .hamburguer
+            background: transparent
+
+            &:after
+                top: 0px
+                transform: rotateZ(-45deg)
+
+            &:before
+                top: 0px
+                transform: rotateZ(45deg)
+
+        .hamburguer
+            height: 4px
+            margin: 0 auto
+            background: #fdf2dc
+            width: 20px
+            position: relative
+            top: calc(50% - 2px)
+
+            &:before, &:after
+                content: ' '
+                position: absolute
+                height: 4px
+                width: 20px
+                background: #fdf2dc
+
+            &:after
+                top: -8px
+
+            &:before
+                top: 8px
+
+        @media screen and (min-width: 1024px)
+            display: none
+
+    & > .dino
+        width: 450px
+        background: url(/assets/images/fogueira_background.svg)
+        bottom: -20%
+        right: 0
+        background-position: center
+        position: absolute
+        background-size: 100%
+        height: 500px
+        z-index: 1
+
+        @media screen and (max-width: 600px)
+            width: 43%
+            background-repeat: no-repeat
+            margin-bottom: -25px
+            margin-right: 25px
+
+    & > .call
+        background: url(/assets/images/header_caipyra_2020.png)
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        width: 100%
+        height: 300px
+        display: block
+        position: absolute
+        top: 100px
+
+        @media screen and (max-width: 600px)
+            background: url(/assets/images/header_mobile_caipyra_2020_junho.png)
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            width: 100%
+            height: 300px
+            display: block
+            position: absolute
+            top: 100px
+
+    & > .cloud
+        background: url(/assets/images/baloes_background2.svg)
+        background-size: contain
+        background-position: center
+        background-repeat: repeat-x
+        width: 100%
+        min-height: 600px
+
+        @media screen and (max-width: 600px)
+            background-repeat: repeat-y
+
+    & > .nav
+        z-index: 6
+
+        & > .header
+            position: fixed
+            top: 0
+            bottom: 0
+            z-index: 5
+            width: 100%
+            border-radius: 0
+            background: $orange1
+            display: none
+
+            &.active
+                display: block
+
+            & > ul
+                list-style: none
+
+                & > li
+                    font-size: 24px
+                    text-align: center
+                    padding: 24px
+
+                    & > a
+                        text-decoration: none
+                        padding: 0 24px
+                        color: $yellow-three
+
+            @media screen and (min-width: 1024px)
+                top: 10px
+                right: 10px
+                bottom: auto
+                width: auto
+                display: block
+                list-style: none
+                line-height: 24px
+                float: right
+                border-radius: 50px
+                padding: 0 24px
+
+                & > ul > li
+                    display: inline-block
+                    vertical-align: top
+                    font-size: 16px
+                    padding: 16px 4px
+
+    & > .pylogo-main
+      background: url(/assets/images/bandeiras.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      display: block
+      width: 540px
+      height: 240px
+      position: absolute
+      top: 0px
+      left: 10px
+
+      @media screen and (max-width: 600px)
+          top: -70px
+          left: 10px
+          width: 240px

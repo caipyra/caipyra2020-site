@@ -1,0 +1,42 @@
+<footer class="rounded footer">
+    <div>
+        <div class="social">
+              <a class="button">
+                  ingressos em breve
+              </a>
+            <a class="social-icons" target="_blank" href='{{footer.social.apybr.link}}'>
+                {{> svgs/pylogo }}
+            </a>
+            <a class="social-icons" target="_blank" href='{{footer.social.facebook.link}}'>
+                {{> svgs/facebook }}
+            </a>
+            <a class="social-icons" target="_blank" >
+                {{> svgs/instagram }}
+            </a>
+            <a class="social-icons" target="_blank" >
+                {{> svgs/twitter }}
+            </a>
+        </div>
+        <div class="nav">
+            {{#each footer.nav}}
+                <ul>
+                    <li class="header">{{title}}</li>
+                    {{#each items}}
+                        <li class="item">
+                            <a href={{link}}>
+                                {{text}}
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/each}}
+        </div>
+    </div>
+    
+    <div class="contact-info">
+      <p>Tem alguma dúvida sobre o evento? Fale conosco <a href="mailto:contato.caipyra@gmail.com" target="_blank">contato.caipyra@gmail.com</a>. </p>
+    </div>
+    <div class="copyright">
+        <p>Caypira is a non-profit volunteer-driven conference for promoting the open-source Python programming language. It is supported by the Brazilian Python Association (APyB).</p>
+    </div>
+</footer>
